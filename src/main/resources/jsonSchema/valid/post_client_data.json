@@ -1,0 +1,409 @@
+{
+  "type": "object",
+  "required": [
+    "errorCode",
+    "errorMessage",
+    "resultData"
+  ],
+  "properties": {
+    "errorCode": {
+      "type": "integer"
+    },
+    "errorMessage": {
+      "type": "null"
+    },
+    "resultData": {
+      "type": "object",
+      "required": [
+        "applicationInfo"
+      ],
+      "properties": {
+        "applicationInfo": {
+          "type": "object",
+          "required": [
+            "agentId",
+            "applicationID",
+            "clientImages",
+            "clientPersonalData",
+            "clientPersonalDataMasked",
+            "createDate",
+            "email",
+            "expirationDate",
+            "hardCheckCode",
+            "hardCheckText",
+            "hasPassportImage",
+            "hasPersonalDataExist",
+            "hasSelfieImage",
+            "mobilePhoneMasked",
+            "partnerId",
+            "passportSelfieStatus",
+            "previousApplicationId",
+            "productInfo",
+            "status",
+            "type"
+          ],
+          "properties": {
+            "agentId": {
+              "oneOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            "applicationID": {
+              "type": "string",
+              "minLength": 1
+            },
+            "clientImages": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "imageType",
+                  "imageUrl"
+                ],
+                "properties": {
+                  "imageType": {
+                    "type": "string"
+                  },
+                  "imageUrl": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            "clientPersonalData": {
+              "type": "object",
+              "required": [
+                "birthDate",
+                "birthPlace",
+                "documentType",
+                "firstName",
+                "hasMiddleName",
+                "ident",
+                "issueDate",
+                "issuer",
+                "issuerCode",
+                "lastName",
+                "middleName",
+                "occupation",
+                "registrationAddressJson",
+                "salary",
+                "sex"
+              ],
+              "properties": {
+                "birthDate": {
+                  "type": "string"
+                },
+                "birthPlace": {
+                  "type": "string"
+                },
+                "documentType": {
+                  "type": "string",
+                  "enum": [
+                    "RUS_PASSPORT_NATIONAL",
+                    "KAZ_ID"
+                  ]
+                },
+                "firstName": {
+                  "type": "string"
+                },
+                "hasMiddleName": {
+                  "type": "boolean"
+                },
+                "ident": {
+                  "type": "string"
+                },
+                "issueDate": {
+                  "type": "string"
+                },
+                "issuer": {
+                  "type": "string"
+                },
+                "issuerCode": {
+                  "type": "string"
+                },
+                "lastName": {
+                  "type": "string"
+                },
+                "middleName": {
+                  "oneOf": [
+                    {
+                      "type": "null"
+                    },
+                    {
+                      "type": "string"
+                    }
+                  ]
+                },
+                "occupation": {
+                  "type": "string"
+                },
+                "registrationAddressJson": {
+                  "type": "string"
+                },
+                "salary": {
+                  "type": "integer",
+                  "exclusiveMinimum": true,
+                  "minimum": 0
+                },
+                "sex": {
+                  "type": "string",
+                  "enum": [
+                    "FEMALE",
+                    "MALE"
+                  ]
+                }
+              }
+            },
+            "clientPersonalDataMasked": {
+              "type": "object",
+              "required": [
+                "birthDateMasked",
+                "birthPlaceMasked",
+                "email",
+                "firstName",
+                "hasPassportImage",
+                "identMasked",
+                "issueDateMasked",
+                "issuerCodeMasked",
+                "issuerMasked",
+                "lastNameMasked",
+                "mobilePhoneMasked",
+                "occupation",
+                "patronymicNameMasked",
+                "registrationAddressMasked",
+                "sex"
+              ],
+              "properties": {
+                "birthDateMasked": {
+                  "type": "string"
+                },
+                "birthPlaceMasked": {
+                  "type": "string"
+                },
+                "email": {
+                  "type": "string"
+                },
+                "firstName": {
+                  "type": "string"
+                },
+                "hasPassportImage": {
+                  "type": "boolean"
+                },
+                "identMasked": {
+                  "type": "string"
+                },
+                "issueDateMasked": {
+                  "type": "string"
+                },
+                "issuerCodeMasked": {
+                  "type": "string"
+                },
+                "issuerMasked": {
+                  "type": "string"
+                },
+                "lastNameMasked": {
+                  "type": "string"
+                },
+                "mobilePhoneMasked": {
+                  "type": "string"
+                },
+                "occupation": {
+                  "type": "string"
+                },
+                "patronymicNameMasked": {
+                  "type": "string"
+                },
+                "registrationAddressMasked": {
+                  "type": "string"
+                },
+                "sex": {
+                  "type": "string",
+                  "enum": [
+                    "FEMALE",
+                    "MALE"
+                  ]
+                }
+              }
+            },
+            "createDate": {
+              "type": "string"
+            },
+            "email": {
+              "type": "string"
+            },
+            "expirationDate": {
+              "type": "string"
+            },
+            "hardCheckCode": {
+              "type": "string"
+            },
+            "hardCheckText": {
+              "oneOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            "hasPassportImage": {
+              "type": "boolean"
+            },
+            "hasPersonalDataExist": {
+              "type": "boolean"
+            },
+            "hasSelfieImage": {
+              "type": "boolean"
+            },
+            "mobilePhoneMasked": {
+              "type": "string"
+            },
+            "partnerId": {
+              "oneOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            "passportSelfieStatus": {
+              "type": "string",
+              "enum": [
+                "CHECK_OFF",
+                "NOT_CHECKED",
+                "PENDING",
+                "REJECTED",
+                "CHECKED_SUCCESS"
+              ]
+            },
+            "previousApplicationId": {
+              "oneOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            "productInfo": {
+              "type": "object",
+              "required": [
+                "earlyUpgradeTerm",
+                "financialType",
+                "freeUpgradeTerm",
+                "goodCode",
+                "goodName",
+                "goodPrice",
+                "leasingSum",
+                "monthPay",
+                "monthTerm",
+                "productCode",
+                "productName",
+                "prolongationTerm",
+                "residualValue",
+                "upgradePayment"
+              ],
+              "properties": {
+                "earlyUpgradeTerm": {
+                  "type": "integer",
+                  "exclusiveMinimum": true,
+                  "minimum": 0
+                },
+                "financialType": {
+                  "type": "string",
+                  "enum": [
+                    "XBOX_LEASING_PROGRAM_DELIVERY",
+                    "APPLE_PHONE_LEASING_PROGRAM",
+                    "SAMSUNG_PHONE_LEASING_PROGRAM"
+                  ]
+                },
+                "freeUpgradeTerm": {
+                  "type": "integer",
+                  "exclusiveMinimum": true,
+                  "minimum": 0
+                },
+                "goodCode": {
+                  "type": "string"
+                },
+                "goodName": {
+                  "type": "string"
+                },
+                "goodPrice": {
+                  "type": "number",
+                  "exclusiveMinimum": true,
+                  "minimum": 0
+                },
+                "leasingSum": {
+                  "type": "number",
+                  "exclusiveMinimum": true,
+                  "minimum": 0
+                },
+                "monthPay": {
+                  "type": "number",
+                  "exclusiveMinimum": true,
+                  "minimum": 0
+                },
+                "monthTerm": {
+                  "type": "number",
+                  "exclusiveMinimum": true,
+                  "minimum": 0
+                },
+                "productCode": {
+                  "type": "string"
+                },
+                "productName": {
+                  "type": "string"
+                },
+                "prolongationTerm": {
+                  "type": "number",
+                  "exclusiveMinimum": true,
+                  "minimum": 0
+                },
+                "residualValue": {
+                  "type": "number",
+                  "exclusiveMinimum": true,
+                  "minimum": 0
+                },
+                "upgradePayment": {
+                  "type": "number"
+                }
+              }
+            },
+            "status": {
+              "type": "string",
+              "enum": [
+                "DRAFT",
+                "NEW",
+                "CONFIRMED",
+                "IN_REVIEW",
+                "REJECTED",
+                "APPROVED",
+                "CANCEL",
+                "CONTRACT_CREATED",
+                "ERROR",
+                "DATA_SAVED",
+                "PENDING"
+              ]
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "NEW",
+                "UPGRADE"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

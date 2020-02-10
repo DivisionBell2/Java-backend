@@ -1,0 +1,83 @@
+{
+  "type": "object",
+  "required": [
+    "errorCode",
+    "errorMessage",
+    "resultData"
+  ],
+  "properties": {
+    "errorCode": {
+      "type": "integer"
+    },
+    "errorMessage": {
+      "type": "string"
+    },
+    "resultData": {
+      "type": "object",
+      "required": [
+        "resultCode",
+        "_links"
+      ],
+      "properties": {
+        "resultCode": {
+          "type": "string"
+        },
+        "_links": {
+          "type": "object",
+          "required": [
+            "upload-selfie-or-passport",
+            "add-client-info",
+            "add-client-info-cabinet-api",
+            "cancel"
+          ],
+          "properties": {
+            "upload-selfie-or-passport": {
+              "type": "object",
+              "required": [
+                "href"
+              ],
+              "properties": {
+                "href": {
+                  "type": "string"
+                }
+              }
+            },
+            "add-client-info": {
+              "type": "object",
+              "required": [
+                "href"
+              ],
+              "properties": {
+                "href": {
+                  "type": "string"
+                }
+              }
+            },
+            "add-client-info-cabinet-api": {
+              "type": "object",
+              "required": [
+                "href"
+              ],
+              "properties": {
+                "href": {
+                  "type": "string"
+                }
+              }
+            },
+            "cancel": {
+              "type": "object",
+              "required": [
+                "href"
+              ],
+              "properties": {
+                "href": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

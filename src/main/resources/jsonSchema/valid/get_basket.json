@@ -1,0 +1,313 @@
+{
+  "type": "object",
+  "required": [
+    "errorCode",
+    "errorMessage",
+    "resultData"
+  ],
+  "properties": {
+    "errorCode": {
+      "type": "integer"
+    },
+    "errorMessage": {
+      "type": "null"
+    },
+    "resultData": {
+      "type": "object",
+      "required": [
+        "basketInfo"
+      ],
+      "properties": {
+        "basketInfo": {
+          "type": "object",
+          "required": [
+            "agentId",
+            "basketId",
+            "channel",
+            "employeeId",
+            "expirationDate",
+            "goods",
+            "lang",
+            "orderId",
+            "partnerId",
+            "referenceId",
+            "status",
+            "storeId",
+            "totalLeasingSum",
+            "totalMonthPay",
+            "totalPrice",
+            "type",
+            "usid"
+          ],
+          "properties": {
+            "agentId": {
+              "oneOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            "basketId": {
+              "type": "string"
+            },
+            "channel": {
+              "type": "string"
+            },
+            "employeeId": {
+              "oneOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            "expirationDate": {
+              "type": "string"
+            },
+            "goods": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "count",
+                  "goodCode",
+                  "goodName",
+                  "goodType",
+                  "leasingInfo",
+                  "obligatory",
+                  "partnerGoodName",
+                  "partnerSKU",
+                  "price",
+                  "tradeInIfo"
+                ],
+                "properties": {
+                  "count": {
+                    "exclusiveMinimum": true,
+                    "minimum": 0
+                  },
+                  "goodCode": {
+                    "type": "string"
+                  },
+                  "goodName": {
+                    "type": "string"
+                  },
+                  "goodType": {
+                    "type": "string",
+                    "enum": [
+                      "LEASING_GOOD",
+                      "PARTNER_SERVICE",
+                      "SERVICE_PROGRAM",
+                      "ACCESSORY",
+                      "MOBILE_CONTRACT",
+                      "SAMSUNG_CARE_PACK"
+                    ]
+                  },
+                  "leasingInfo": {
+                    "type": "object",
+                    "required": [
+                      "earlyUpgradeTerm",
+                      "financialType",
+                      "freeUpgradeTerm",
+                      "leasingSum",
+                      "monthPay",
+                      "monthTerm",
+                      "productCode",
+                      "productName",
+                      "prolongationTerm",
+                      "residualSum",
+                      "upgradePayment"
+                    ],
+                    "properties": {
+                      "earlyUpgradeTerm": {
+                        "type": "integer",
+                        "exclusiveMinimum": true,
+                        "minimum": 0
+                      },
+                      "financialType": {
+                        "type": "string",
+                        "enum": [
+                          "PARTNER_SERVICE",
+                          "SERVICE_PROGRAM",
+                          "ACCESSORY",
+                          "MOBILE_CONTRACT",
+                          "SAMSUNG_CARE_PACK",
+                          "XBOX_LEASING_PROGRAM_DELIVERY",
+                          "APPLE_PHONE_LEASING_PROGRAM",
+                          "SAMSUNG_PHONE_LEASING_PROGRAM"
+                        ]
+                      },
+                      "freeUpgradeTerm": {
+                        "type": "integer",
+                        "exclusiveMinimum": true,
+                        "minimum": 0
+                      },
+                      "leasingSum": {
+                        "type": "number",
+                        "exclusiveMinimum": true,
+                        "minimum": 0
+                      },
+                      "monthPay": {
+                        "type": "number",
+                        "exclusiveMinimum": true,
+                        "minimum": 0
+                      },
+                      "monthTerm": {
+                        "type": "integer",
+                        "exclusiveMinimum": true,
+                        "minimum": 0
+                      },
+                      "productCode": {
+                        "type": "string"
+                      },
+                      "productName": {
+                        "type": "string"
+                      },
+                      "prolongationTerm": {
+                        "type": "integer",
+                        "exclusiveMinimum": true,
+                        "minimum": 0
+                      },
+                      "residualSum": {
+                        "type": "number",
+                        "exclusiveMinimum": true,
+                        "minimum": 0
+                      },
+                      "upgradePayment": {
+                        "type": "number"
+                      }
+                    }
+                  },
+                  "obligatory": {
+                    "type": "boolean"
+                  },
+                  "partnerGoodName": {
+                    "oneOf": [
+                      {
+                        "type": "null"
+                      },
+                      {
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "partnerSKU": {
+                    "oneOf": [
+                      {
+                        "type": "null"
+                      },
+                      {
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "price": {
+                    "type": "number",
+                    "exclusiveMinimum": true,
+                    "minimum": 0
+                  },
+                  "tradeInIfo": {
+                    "oneOf": [
+                      {
+                        "type": "null"
+                      },
+                      {
+                        "type": "string"
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            "lang": {
+              "type": "string",
+              "enum": [
+                "RU",
+                "KZ",
+                "EN"
+              ]
+            },
+            "orderId": {
+              "oneOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            "partnerId": {
+              "oneOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            "referenceId": {
+              "oneOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            "status": {
+              "type": "string",
+              "enum": [
+                "NEW",
+                "reference_created",
+                "error",
+                "cancel"
+              ]
+            },
+            "storeId": {
+              "oneOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            "totalLeasingSum": {
+              "type": "number",
+              "exclusiveMinimum": true,
+              "minimum": 0
+            },
+            "totalMonthPay": {
+              "type": "number",
+              "exclusiveMinimum": true,
+              "minimum": 0
+            },
+            "totalPrice": {
+              "type": "number",
+              "exclusiveMinimum": true,
+              "minimum": 0
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "LEASING",
+                "DIGITAL_SUBSCRIPTION"
+              ]
+            },
+            "usid": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

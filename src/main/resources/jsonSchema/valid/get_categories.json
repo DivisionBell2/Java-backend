@@ -1,0 +1,89 @@
+{
+  "type": "object",
+  "required": [
+    "errorCode",
+    "errorMessage",
+    "resultData"
+  ],
+  "properties": {
+    "errorCode": {
+      "type": "integer"
+    },
+    "errorMessage": {
+      "type": "null"
+    },
+    "resultData": {
+      "type": "object",
+      "required": [
+        "categories"
+      ],
+      "properties": {
+        "categories": {
+          "type": "array",
+          "required": [
+            "name",
+            "code",
+            "description",
+            "isCatalog",
+            "childs",
+            "sortOrder"
+          ],
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "code": {
+                "type": "string"
+              },
+              "description": {
+                "type": "null"
+              },
+              "isCatalog": {
+                "type": "boolean"
+              },
+              "childs": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "name",
+                    "code",
+                    "description",
+                    "isCatalog",
+                    "childs",
+                    "sortOrder"
+                  ],
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "null"
+                    },
+                    "isCatalog": {
+                      "type": "boolean"
+                    },
+                    "childs": {
+                      "type": "array"
+                    },
+                    "sortOrder": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              },
+              "sortOrder": {
+                "type": "integer"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

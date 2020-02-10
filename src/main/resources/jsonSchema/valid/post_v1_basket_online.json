@@ -1,0 +1,27 @@
+{
+  "type": "object",
+  "required": [
+    "errorCode",
+    "errorMessage",
+    "resultData"
+  ],
+  "properties": {
+    "errorCode": {
+      "type": "integer"
+    },
+    "errorMessage": {
+      "type": "null"
+    },
+    "resultData": {
+      "type": "object",
+      "required": [
+        "basketId"
+      ],
+      "properties": {
+        "basketId": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "type": "object",
+  "required": [
+  "errorCode",
+  "errorMessage",
+  "resultData"
+  ],
+  "properties": {
+    "errorCode": {
+      "type": "integer",
+      "required": [
+        "1200"
+      ]
+    },
+    "errorMessage": {
+      "type": "string",
+      "required": [
+        "Указанный товар не найден."
+      ]
+    },
+    "resultData": {
+      "type": "null"
+    }
+  }
+}

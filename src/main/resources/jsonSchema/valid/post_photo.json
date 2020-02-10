@@ -1,0 +1,279 @@
+{
+  "type": "object",
+  "required": [
+    "errorCode",
+    "errorMessage",
+    "resultData"
+  ],
+  "properties": {
+    "errorCode": {
+      "type": "integer"
+    },
+    "errorMessage": {
+      "type": "null"
+    },
+    "resultData": {
+      "type": "object",
+      "required": [
+        "applicantStatus",
+        "application",
+        "checkResultText",
+        "documentData"
+      ],
+      "properties": {
+        "applicantStatus": {
+          "type": "string"
+        },
+        "application": {
+          "type": "object",
+          "required": [
+            "agentId",
+            "applicationID",
+            "basketId",
+            "createDate",
+            "email",
+            "expirationDate",
+            "hardCheckText",
+            "hasPassportImage",
+            "hasPersonalDataExist",
+            "hasSelfieImage",
+            "mobilePhoneMasked",
+            "partnerId",
+            "passportSelfieStatus",
+            "previousApplicationId",
+            "productInfo",
+            "status",
+            "type"
+          ],
+          "properties": {
+            "agentId": {
+              "oneOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            "applicationID": {
+              "type": "string",
+              "minLength": 1
+            },
+            "basketId": {
+              "type": "string"
+            },
+            "createDate": {
+              "type": "string"
+            },
+            "email": {
+              "type": "string"
+            },
+            "expirationDate": {
+              "type": "string"
+            },
+            "hardCheckText": {
+              "oneOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            "hasPassportImage": {
+              "type": "boolean"
+            },
+            "hasPersonalDataExist": {
+              "type": "boolean"
+            },
+            "hasSelfieImage": {
+              "type": "boolean"
+            },
+            "mobilePhoneMasked": {
+              "type": "string"
+            },
+            "partnerId": {
+              "oneOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            "passportSelfieStatus": {
+              "type": "string",
+              "enum": [
+                "CHECK_OFF",
+                "NOT_CHECKED",
+                "PENDING",
+                "REJECTED",
+                "CHECKED_SUCCESS"
+              ]
+            },
+            "previousApplicationId": {
+              "oneOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            "productInfo": {
+              "type": "object",
+              "required": [
+                "earlyUpgradeTerm",
+                "financialType",
+                "freeUpgradeTerm",
+                "goodCode",
+                "goodName",
+                "goodPrice",
+                "leasingSum",
+                "monthPay",
+                "monthTerm",
+                "productCode",
+                "productName",
+                "prolongationTerm",
+                "residualValue",
+                "upgradePayment"
+              ],
+              "properties": {
+                "earlyUpgradeTerm": {
+                  "type": "integer",
+                  "exclusiveMinimum": true,
+                  "minimum": 0
+                },
+                "financialType": {
+                  "type": "string",
+                  "enum": [
+                    "XBOX_LEASING_PROGRAM_DELIVERY",
+                    "APPLE_PHONE_LEASING_PROGRAM",
+                    "SAMSUNG_PHONE_LEASING_PROGRAM"
+                  ]
+                },
+                "freeUpgradeTerm": {
+                  "type": "integer",
+                  "exclusiveMinimum": true,
+                  "minimum": 0
+                },
+                "goodCode": {
+                  "type": "string"
+                },
+                "goodName": {
+                  "type": "string"
+                },
+                "goodPrice": {
+                  "type": "number",
+                  "exclusiveMinimum": true,
+                  "minimum": 0
+                },
+                "leasingSum": {
+                  "type": "number",
+                  "exclusiveMinimum": true,
+                  "minimum": 0
+                },
+                "monthPay": {
+                  "type": "number",
+                  "exclusiveMinimum": true,
+                  "minimum": 0
+                },
+                "monthTerm": {
+                  "type": "number",
+                  "exclusiveMinimum": true,
+                  "minimum": 0
+                },
+                "productCode": {
+                  "type": "string"
+                },
+                "productName": {
+                  "type": "string"
+                },
+                "prolongationTerm": {
+                  "type": "number",
+                  "exclusiveMinimum": true,
+                  "minimum": 0
+                },
+                "residualValue": {
+                  "type": "number",
+                  "exclusiveMinimum": true,
+                  "minimum": 0
+                },
+                "upgradePayment": {
+                  "type": "number"
+                }
+              }
+            },
+            "status": {
+              "type": "string",
+              "enum": [
+                "DRAFT",
+                "NEW",
+                "CONFIRMED",
+                "IN_REVIEW",
+                "REJECTED",
+                "APPROVED",
+                "CANCEL",
+                "CONTRACT_CREATED",
+                "ERROR",
+                "DATA_SAVED",
+                "PENDING"
+              ]
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "NEW",
+                "UPGRADE"
+              ]
+            }
+          }
+        },
+        "checkResultText": {
+          "type": "null"
+        },
+        "documentData": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "required": [
+            "documentFields",
+            "success"
+          ],
+          "properties": {
+            "documentFields": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "correct",
+                  "fieldName",
+                  "fieldValue"
+                ],
+                "properties": {
+                  "correct": {
+                    "type": "boolean"
+                  },
+                  "fieldName": {
+                    "type": "string"
+                  },
+                  "fieldValue": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            "success": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    }
+  }
+}

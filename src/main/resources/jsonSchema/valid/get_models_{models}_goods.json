@@ -1,0 +1,447 @@
+{
+  "type": "object",
+  "required": [
+    "errorCode",
+    "errorMessage",
+    "resultData"
+  ],
+  "properties": {
+    "errorCode": {
+      "type": "integer"
+    },
+    "errorMessage": {
+      "type": "null"
+    },
+    "resultData": {
+      "type": "object",
+      "required": [
+        "model",
+        "goods"
+      ],
+      "properties": {
+        "model": {
+          "type": "object",
+          "required": [
+            "name",
+            "code",
+            "producer",
+            "marketingLabel",
+            "modelType",
+            "categoryCodes",
+            "description",
+            "sortOrder"
+          ],
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "code": {
+              "type": "string"
+            },
+            "producer": {
+              "type": "object",
+              "required": [
+                "name",
+                "code",
+                "categoryCodes"
+              ],
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "code": {
+                  "type": "string"
+                },
+                "categoryCodes": {
+                  "type": "array"
+                }
+              }
+            },
+            "marketingLabel": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "modelType": {
+              "type": "object",
+              "required": [
+                "name",
+                "code"
+              ],
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "code": {
+                  "type": "string"
+                }
+              }
+            },
+            "categoryCodes": {
+              "type": "array"
+            },
+            "description": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "sortOrder": {
+              "type": "integer"
+            }
+          }
+        },
+        "goods": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "onSale",
+              "modifyTime",
+              "sortOrder",
+              "code",
+              "name",
+              "color",
+              "params",
+              "description",
+              "shortDescription",
+              "price",
+              "features",
+              "leasingInfo",
+              "additionalServices",
+              "images",
+              "contentLabel",
+              "marketingCodes",
+              "similarGoods"
+            ],
+            "properties": {
+              "onSale": {
+                "type": "boolean"
+              },
+              "modifyTime": {
+                "type": "string"
+              },
+              "sortOrder": {
+                "type": "integer"
+              },
+              "code": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "color": {
+                "type": "object",
+                "required": [
+                  "colorCode",
+                  "colorName"
+                ],
+                "properties": {
+                  "colorCode": {
+                    "type": "string"
+                  },
+                  "colorName": {
+                    "type": "string"
+                  }
+                }
+              },
+              "params": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "name",
+                    "type",
+                    "value"
+                  ],
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "type": {
+                      "type": "string",
+                      "enum": [
+                        "volume",
+                        "color"
+                      ]
+                    },
+                    "value": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "description": {
+                "type": "null"
+              },
+              "shortDescription": {
+                "type": "null"
+              },
+              "price": {
+                "type": "number",
+                "exclusiveMinimum": true,
+                "minimum": 0
+              },
+              "features": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "title",
+                    "content",
+                    "imgUrl",
+                    "actionUrl",
+                    "type"
+                  ],
+                  "properties": {
+                    "title": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "content": {
+                      "type": "string"
+                    },
+                    "imgUrl": {
+                      "oneOf": [
+                        {
+                          "type": "null"
+                        },
+                        {
+                          "type": "string",
+                          "pattern": "^(https://)"
+                        }
+                      ]
+                    },
+                    "actionUrl": {
+                      "type": "null"
+                    },
+                    "type": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "leasingInfo": {
+                "type": "object",
+                "required": [
+                  "financialType",
+                  "code",
+                  "leasingSum",
+                  "monthPay",
+                  "monthTerm",
+                  "residualSum",
+                  "earlyUpgradeTerm",
+                  "freeUpgradeTerm",
+                  "prolongationTerm",
+                  "hasUpgrade",
+                  "upgradePayment"
+                ],
+                "properties": {
+                  "financialType": {
+                    "type": "string",
+                    "enum": [
+                      "XBOX_LEASING_PROGRAM_DELIVERY",
+                      "APPLE_PHONE_LEASING_PROGRAM",
+                      "SAMSUNG_PHONE_LEASING_PROGRAM"
+                    ]
+                  },
+                  "code": {
+                    "type": "string"
+                  },
+                  "leasingSum": {
+                    "type": "number",
+                    "exclusiveMinimum": true,
+                    "minimum": 0
+                  },
+                  "monthPay": {
+                    "type": "number",
+                    "exclusiveMinimum": true,
+                    "minimum": 0
+                  },
+                  "monthTerm": {
+                    "type": "integer",
+                    "exclusiveMinimum": true,
+                    "minimum": 0
+                  },
+                  "residualSum": {
+                    "type": "number",
+                    "exclusiveMinimum": true,
+                    "minimum": 0
+                  },
+                  "earlyUpgradeTerm": {
+                    "type": "integer",
+                    "exclusiveMinimum": true,
+                    "minimum": 0
+                  },
+                  "freeUpgradeTerm": {
+                    "type": "integer",
+                    "exclusiveMinimum": true,
+                    "minimum": 0
+                  },
+                  "prolongationTerm": {
+                    "type": "integer",
+                    "exclusiveMinimum": true,
+                    "minimum": 0
+                  },
+                  "hasUpgrade": {
+                    "type": "boolean"
+                  },
+                  "upgradePayment": {
+                    "type": "number"
+                  }
+                }
+              },
+              "additionalServices": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "type",
+                    "obligatory",
+                    "price",
+                    "code",
+                    "name"
+                  ],
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "enum": [
+                        "PARTNER_SERVICE",
+                        "SERVICE_PROGRAM",
+                        "ACCESSORY",
+                        "MOBILE_CONTRACT",
+                        "SAMSUNG_CARE_PACK"
+                      ]
+                    },
+                    "obligatory": {
+                      "type": "boolean"
+                    },
+                    "price": {
+                      "type": "number",
+                      "exclusiveMinimum": true,
+                      "minimum": 0
+                    },
+                    "code": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "images": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "type",
+                    "sortOrder",
+                    "imgUrl",
+                    "thumbUrl"
+                  ],
+                  "properties": {
+                    "type": {
+                      "type": "string"
+                    },
+                    "sortOrder": {
+                      "type": "integer"
+                    },
+                    "imgUrl": {
+                      "type": "string"
+                    },
+                    "thumbUrl": {
+                      "type": "null",
+                      "pattern": "^(https://)"
+                    }
+                  }
+                }
+              },
+              "contentLabel": {
+                "type": "array",
+                "items": {
+                  "type": "object"
+                },
+                "required": [
+                  "code",
+                  "imgUrl",
+                  "title",
+                  "content"
+                ],
+                "properties": {
+                  "code": {
+                    "type": "string"
+                  },
+                  "imgUrl": {
+                    "oneOf": [
+                      {
+                        "type": "null"
+                      },
+                      {
+                        "type": "string",
+                        "pattern": "^(https://)"
+                      }
+                    ]
+                  },
+                  "title": {
+                    "type": "string"
+                  },
+                  "content": {
+                    "type": "string"
+                  }
+                }
+              },
+              "marketingCodes": {
+                "type": "null"
+              },
+              "similarGoods": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "code",
+                    "param"
+                  ],
+                  "properties": {
+                    "code": {
+                      "type": "string"
+                    },
+                    "param": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "required": [
+                          "name",
+                          "type",
+                          "value"
+                        ],
+                        "properties": {
+                          "name": {
+                            "type": "string"
+                          },
+                          "type": {
+                            "type": "string",
+                            "enum": [
+                              "volume",
+                              "color"
+                            ]
+                          },
+                          "value": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

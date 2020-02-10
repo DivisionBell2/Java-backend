@@ -1,0 +1,179 @@
+{
+  "type": "object",
+  "required": [
+    "errorCode",
+    "errorMessage",
+    "resultData"
+  ],
+  "properties": {
+    "errorCode": {
+      "type": "integer"
+    },
+    "errorMessage": {
+      "type": "null"
+    },
+    "resultData": {
+      "type": "object",
+      "required": [
+        "agentId",
+        "applicationID",
+        "basketId",
+        "createDate",
+        "email",
+        "expirationDate",
+        "hardCheckText",
+        "hasPassportImage",
+        "hasPersonalDataExist",
+        "hasSelfieImage",
+        "mobilePhoneMasked",
+        "partnerId",
+        "passportSelfieStatus",
+        "previousApplicationId",
+        "productInfo",
+        "status",
+        "type"
+      ],
+      "properties": {
+        "applicantStatus": {
+          "type": "string"
+        },
+        "application": {
+          "type": "object",
+          "required": [
+            "agentId",
+            "applicationID",
+            "basketId",
+            "createDate",
+            "email",
+            "expirationDate",
+            "hardCheckText",
+            "hasPassportImage",
+            "hasPersonalDataExist",
+            "hasSelfieImage",
+            "mobilePhoneMasked",
+            "partnerId",
+            "passportSelfieStatus",
+            "previousApplicationId",
+            "productInfo",
+            "status",
+            "type"
+          ],
+          "properties": {
+            "agentId": {
+              "type": "null"
+            },
+            "applicationID": {
+              "type": "string",
+              "minLength": 1
+            },
+            "basketId": {
+              "type": "string"
+            },
+            "createDate": {
+              "type": "string"
+            },
+            "email": {
+              "type": "string"
+            },
+            "expirationDate": {
+              "type": "string"
+            },
+            "hardCheckText": {
+              "type": "null"
+            },
+            "hasPassportImage": {
+              "type": "boolean"
+            },
+            "hasPersonalDataExist": {
+              "type": "boolean"
+            },
+            "hasSelfieImage": {
+              "type": "boolean"
+            },
+            "mobilePhoneMasked": {
+              "type": "string"
+            },
+            "partnerId": {
+              "type": "null"
+            },
+            "passportSelfieStatus": {
+              "type": "string"
+            },
+            "previousApplicationId": {
+              "type": "null"
+            },
+            "productInfo": {
+              "type": "object",
+              "required": [
+                "earlyUpgradeTerm",
+                "financialType",
+                "freeUpgradeTerm",
+                "goodCode",
+                "goodName",
+                "goodPrice",
+                "leasingSum",
+                "monthPay",
+                "monthTerm",
+                "productCode",
+                "productName",
+                "prolongationTerm",
+                "residualValue",
+                "upgradePayment"
+              ],
+              "properties": {
+                "earlyUpgradeTerm": {
+                  "type": "integer"
+                },
+                "financialType": {
+                  "type": "string"
+                },
+                "freeUpgradeTerm": {
+                  "type": "integer"
+                },
+                "goodCode": {
+                  "type": "string"
+                },
+                "goodName": {
+                  "type": "string"
+                },
+                "goodPrice": {
+                  "type": "integer"
+                },
+                "leasingSum": {
+                  "type": "integer"
+                },
+                "monthPay": {
+                  "type": "integer"
+                },
+                "monthTerm": {
+                  "type": "integer"
+                },
+                "productCode": {
+                  "type": "string"
+                },
+                "productName": {
+                  "type": "string"
+                },
+                "prolongationTerm": {
+                  "type": "integer"
+                },
+                "residualValue": {
+                  "type": "integer"
+                },
+                "upgradePayment": {
+                  "type": "integer"
+                }
+              }
+            },
+            "status": {
+              "type": "string"
+            },
+            "type": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

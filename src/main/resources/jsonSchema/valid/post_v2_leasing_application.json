@@ -1,0 +1,157 @@
+{
+  "type": "object",
+  "required": [
+    "errorCode",
+    "errorMessage",
+    "resultData"
+  ],
+  "properties": {
+    "errorCode": {
+      "type": "integer"
+    },
+    "errorMessage": {
+      "type": "null"
+    },
+    "resultData": {
+      "type": "object",
+      "required": [
+        "agentId",
+        "applicationID",
+        "basketId",
+        "createDate",
+        "email",
+        "expirationDate",
+        "hardCheckText",
+        "hasPassportImage",
+        "hasPersonalDataExist",
+        "hasSelfieImage",
+        "mobilePhoneMasked",
+        "partnerId",
+        "passportSelfieStatus",
+        "previousApplicationId",
+        "productInfo",
+        "status",
+        "type"
+      ],
+      "properties": {
+        "agentId": {
+          "type": "string"
+        },
+        "applicationID": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "basketId": {
+          "type": "string"
+        },
+        "createDate": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "expirationDate": {
+          "type": "string"
+        },
+        "hardCheckText": {
+          "type": "null"
+        },
+        "hasPassportImage": {
+          "type": "boolean"
+        },
+        "hasPersonalDataExist": {
+          "type": "boolean"
+        },
+        "hasSelfieImage": {
+          "type": "boolean"
+        },
+        "mobilePhoneMasked": {
+          "type": "string"
+        },
+        "partnerId": {
+          "type": "null"
+        },
+        "passportSelfieStatus": {
+          "type": "string"
+        },
+        "previousApplicationId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "productInfo": {
+          "type": "object",
+          "required": [
+            "earlyUpgradeTerm",
+            "financialType",
+            "freeUpgradeTerm",
+            "goodCode",
+            "goodName",
+            "goodPrice",
+            "leasingSum",
+            "monthPay",
+            "monthTerm",
+            "productCode",
+            "productName",
+            "prolongationTerm",
+            "residualValue",
+            "upgradePayment"
+          ],
+          "properties": {
+            "earlyUpgradeTerm": {
+              "type": "integer"
+            },
+            "financialType": {
+              "type": "string"
+            },
+            "freeUpgradeTerm": {
+              "type": "integer"
+            },
+            "goodCode": {
+              "type": "string"
+            },
+            "goodName": {
+              "type": "string"
+            },
+            "goodPrice": {
+              "type": "number"
+            },
+            "leasingSum": {
+              "type": "number"
+            },
+            "monthPay": {
+              "type": "number"
+            },
+            "monthTerm": {
+              "type": "number"
+            },
+            "productCode": {
+              "type": "string"
+            },
+            "productName": {
+              "type": "string"
+            },
+            "prolongationTerm": {
+              "type": "number"
+            },
+            "residualValue": {
+              "type": "number"
+            },
+            "upgradePayment": {
+              "type": "number"
+            }
+          }
+        },
+        "status": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
