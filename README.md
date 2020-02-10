@@ -12,10 +12,10 @@ This framework is only for skills demonstration. All contracts are deleted. Sorr
 
 ## folders assignment
 1. /api/ - for api methods work
-/pojo/ - for response pojo descriptions
-/services/ - for usable api test methods
-/resources/ - for base properties and json-schemas for validation.
-/tests/ - for all packages of test groups
+2. /pojo/ - for response pojo descriptions
+3. /services/ - for usable api test methods
+4. /resources/ - for base properties and json-schemas for validation.
+5. /tests/ - for all packages of test groups
  
 ## how to execute this tests
 1. Run TestNG file for test package execute
