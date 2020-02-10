@@ -11,7 +11,7 @@ Autotests in this framework are using API-testing for online leasing service. Fr
 This framework is only for skills demonstration. All contracts are deleted. Sorry -)
 
 ## folders assignment
-1. /api/ - for api methods work
+1. /api/ - for api work methods
 2. /pojo/ - for response pojo descriptions
 3. /services/ - for usable api test methods
 4. /resources/ - for base properties and json-schemas for validation.
